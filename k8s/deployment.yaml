@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weather-rest-api-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: weather-rest-api
+  template:
+    metadata:
+      labels:
+        app: weather-rest-api
+    spec:
+      containers:
+        - name: weather-rest-api
+          image: weather-rest-api-weather-rest-api:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: WEATHER_GEOCODING_API_KEY
+              value: "74b24d8a28a515fbe23939c45c3cc020"
+            - name: WEATHER_YANDEX_API_KEY
+              value: "ba0b1e3f-ab8b-466f-98aa-4c21106f8d6b"
+            - name: WEATHER_WEATHERAPI_API_KEY
+              value: "47de8f2077354f72add114244240206"
