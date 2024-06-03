@@ -1,0 +1,11 @@
+### Get Today Weather
+GET http://localhost:8080/api/weather/today?city=Moscow&source=all
+
+### Get Week Weather
+GET http://localhost:8080/api/weather/week?city=Moscow&source=all
+
+### Get Today Weather
+GET http://localhost:8080/api/weather/today?city=Vorkuta&source=yandex
+
+### Get Week Weather
+GET http://localhost:8080/api/weather/today?city=Vorkuta44
