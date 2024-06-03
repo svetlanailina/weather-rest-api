@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  weather-rest-api:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - WEATHER_GEOCODING_API_KEY=74b24d8a28a515fbe23939c45c3cc020
+      - WEATHER_YANDEX_API_KEY=ba0b1e3f-ab8b-466f-98aa-4c21106f8d6b
+      - WEATHER_WEATHERAPI_API_KEY=47de8f2077354f72add114244240206
